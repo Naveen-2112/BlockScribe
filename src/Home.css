@@ -1,0 +1,23 @@
+/* Home.css */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+  }

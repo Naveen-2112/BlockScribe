@@ -1,0 +1,176 @@
+/* Dashboard container */
+.dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome heading */
+.dashboard-container h1 {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Subheading */
+.dashboard-container h2 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Note form */
+.note-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input for title */
+.note-title {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Textarea for note */
+.note-content {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: none;
+}
+
+/* Image upload */
+.image-upload {
+  display: block;
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+/* Image previews */
+.image-previews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-previews img {
+  border-radius: 5px;
+  max-width: 100px;
+  height: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mood tracker */
+.mood-tracker {
+  margin-bottom: 15px;
+}
+
+.mood-tracker h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.mood-tracker select,
+.mood-tracker input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Save button */
+.note-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.note-form button:hover {
+  background: #45a049;
+}
+
+/* Notes list */
+.notes-list {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notes-list h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Individual note item */
+.note-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: #fdfdfd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.note-item h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #4CAF50;
+}
+
+.note-item p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.note-item img {
+  margin-top: 10px;
+  max-width: 100px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .note-form button {
+    font-size: 0.9rem;
+  }
+
+  .note-item h4 {
+    font-size: 1rem;
+  }
+}

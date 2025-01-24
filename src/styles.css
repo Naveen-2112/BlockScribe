@@ -1,0 +1,40 @@
+/* styles.css */
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #282c34;
+}
+
+/* Style for the React Router <Link> elements */
+nav .link {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav .link:hover {
+  text-decoration: underline;
+}
+
+/* User greeting */
+nav h2 {
+  color: white;
+}
+
+/* Logout button */
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
