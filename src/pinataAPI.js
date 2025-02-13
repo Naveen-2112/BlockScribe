@@ -83,3 +83,14 @@ export const uploadImageToIPFS=async (imageFile) => {
         return { success: false, error: error.message };
     }
 };
+
+
+export const fetchJournalFromIPFS = async (cid) => {
+  try {
+    const response = await axios.get(`https://gateway.pinata.cloud/ipfs/${cid}`);
+    return response.data; // JSON journal data
+  } catch (error) {
+    console.error("Error fetching journal from IPFS:", error);
+    return null;
+  }
+};
