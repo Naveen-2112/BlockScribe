@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import {jwtDecode} from 'jwt-decode';
-import {BrowserRouter as Router, Route, Routes, Navigate, useNavigate, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
 import './styles.css';
 import Home from './Home';
 import Dashboard from './Dashboard';
@@ -70,12 +70,5 @@ function App() {
     </GoogleOAuthProvider>
   );
 }
-// const Home = ({ user }) => {
-//   return <h2>Welcome to BlockScribe, Please sign in to continue</h2>;
-// };
-
-// const Dashboard = () => {
-//   return <h2>Dashboard(protected)</h2>
-// }
 
 export default App;

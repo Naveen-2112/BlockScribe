@@ -1,40 +1,122 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(145deg, #1a1a1a, #000000); /* Ensure full app consistency */
+  min-height: 100vh;
+}
 
 /* Navbar */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 25px;
+  background: linear-gradient(145deg, #1a1a1a, #000000);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #282c34;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Style for the React Router <Link> elements */
+/* Links */
 nav .link {
-  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e6e9ef;
   text-decoration: none;
   margin: 0 10px;
+  transition: color 0.3s ease;
 }
 
 nav .link:hover {
-  text-decoration: underline;
+  color: #80d8ff; /* Light cyan hover */
 }
 
-/* User greeting */
+/* User Info */
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 nav h2 {
-  color: white;
+  font-size: 1.2rem; /* Smaller than dashboard h2 */
+  font-weight: 600;
+  color: #e6e9ef;
+  opacity: 0.9;
 }
 
-/* Logout button */
-button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #61dafb;
+/* Logout Button */
+nav button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #80d8ff, #40c4ff);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  box-shadow: 0 4px 12px rgba(128, 216, 255, 0.4);
 }
 
-button:hover {
-  background-color: #21a1f1;
+nav button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(64, 196, 255, 0.6);
+  background: linear-gradient(90deg, #40c4ff, #00b0ff);
+}
+
+nav button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(128, 216, 255, 0.3);
+}
+
+/* Google Sign-In Button */
+nav .google-signin-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #80d8ff, #40c4ff);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  box-shadow: 0 4px 12px rgba(128, 216, 255, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+nav .google-signin-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(64, 196, 255, 0.6);
+  background: linear-gradient(90deg, #40c4ff, #00b0ff);
+}
+
+nav .google-signin-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(128, 216, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  nav { padding: 10px 15px; }
+  nav .link { font-size: 1rem; margin: 0 5px; }
+  nav h2 { font-size: 1rem; }
+  nav button, nav .google-signin-button { padding: 8px 16px; }
 }

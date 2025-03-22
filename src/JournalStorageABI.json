@@ -1,0 +1,121 @@
+[   {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "userId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ipfsHash",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "timestamp",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "mood",
+        "type": "string"
+      }
+    ],
+    "name": "JournalAdded",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_title",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_ipfsHash",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_imageHashes",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string",
+        "name": "_timestamp",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_mood",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_userId",
+        "type": "string"
+      }
+    ],
+    "name": "addJournalEntry",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_userId",
+        "type": "string"
+      }
+    ],
+    "name": "getJournalEntries",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "ipfsHash",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "imageHashes",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "timestamp",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "mood",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct JournalStorage.JournalEntry[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }]

@@ -1,14 +1,12 @@
-// Home.js
 import React from 'react';
-import './Home.css'; // Import the CSS file for styling
+import './Home.css';
 
-const Home = () => {
+const Home = ({ user }) => {
   return (
     <div className="home-container">
       <h1>Welcome to BlockScribe</h1>
       <p>Your secure and seamless note-taking companion.</p>
-      <p>Please sign in to continue.</p>
-      {/* <button className="sign-in-button">Sign In with Google</button> */}
+      {!user && <p>Please sign in to continue</p>}
     </div>
   );
 };
