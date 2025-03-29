@@ -73,7 +73,35 @@ const Dashboard = ({ user }) => {
 
     return () => clearInterval(progressTimer);
   }, [isLoading, stepsQueue]);
+// Modified useEffect for progress calculation
+// useEffect(() => {
+//   if (!isLoading || stepsQueue.length === 0) return;
 
+//   const totalSteps = stepsQueue.length;
+//   const stepDuration = 2500; // 2.5s per step (2s typing + 0.5s tick)
+  
+//   // Calculate progress based on completed steps rather than time
+//   const progressPerStep = 100 / totalSteps;
+//   const currentProgress = (stepIndex / totalSteps) * 100;
+  
+//   // Update progress based on current step
+//   setProgress(currentProgress);
+  
+//   // Only mark loading as complete when all steps are finished
+//   if (stepIndex >= totalSteps) {
+//     const completionTimer = setTimeout(() => {
+//       setIsLoading(false);
+//       setLoadingComplete(true);
+//       setStepsQueue([]);
+//       setStepIndex(0);
+//     }, 500); // Small delay after final step
+    
+//     return () => clearTimeout(completionTimer);
+//   }
+// }, [stepsQueue, stepIndex, isLoading]);
+
+// Remove the previous smooth percentage increment useEffect
+// (Delete the existing useEffect that sets up progressTimer interval)
   const startLoading = () => {
     setIsLoading(true);
     setCurrentStep("");
@@ -129,6 +157,18 @@ const Dashboard = ({ user }) => {
       const txHash = await addJournalToBlockchain(title, journalCID, imageCIDs, journalData.timestamp, mood, userId, logStep);
       if (!txHash) throw new Error("Blockchain transaction failed.");
 
+      const newJournal={
+        title,
+        journalCID,
+        imageCIDs,
+        timestamp:journalData.timestamp,
+        mood
+      };
+
+      const updatedNotesList=[...notesList, newJournal];
+      setNotesList(updatedNotesList);
+      localStorage.setItem("notes",JSON.stringify(updatedNotesList));
+      logStep("Journal saved and added to displayed list");
       setTitle("");
       setNote("");
       setImages([]);
